@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile First</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -41,6 +43,45 @@
         <p class="banner_texto"> Encontre em nossa estrante o que precisa para seu desenvolvimento</p>
         <input type="search" class="banner_pesquisa" placeholder="Qual será sua próxima Leitura?">
     </section>
+    <section class="carrossel">
+        <h2 class="carrossel_titulo"> Novos Lançamentos</h2>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/Angular.png" alt="Livro Angular"></div>
+                <div class="swiper-slide"><img src="images/ApacheKafka.png" alt="Livro Kafka"></div>
+                <div class="swiper-slide"><img src="images/Gestão2.png" alt="Livro Gestão"></div>
+                <div class="swiper-slide"><img src="images/MetricasAgeis.png" alt="Livro Metricas ageis"></div>
+                <div class="swiper-slide"><img src="images/ReactNative.png" alt="Livro React"></div>
+                <div class="swiper-slide"><img src="images/UX.png" alt="Livro Ux"></div>
+            </div>
+
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination:{
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
 </body>
 
 <footer>
